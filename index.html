@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matematicki milijunas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container pocetni">
+        <div class="naslov">
+            <h1 class="text-center">Kviz matematički milijunaš</h1>
+        </div>
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item"><button id="novaIgra">Nova igra</button></li>
+            <li class="list-inline-item"><button id="pravila">Pravila</button></li>
+            <li class="list-inline-item"><button id="oProjektu">O projektu</button></li>
+        </ul>
+    </div>
+    <div class="container pravila text-center">
+        <h2>Pravila igre</h2>
+        <p> Odgovara se na 15 pitanja koja su rangirana od najlakšeg do najtežeg. <br>
+            Pitanja se sastoje od jedne matematičke operacije (sabiranje, oduzimanje, množenje ili dijeljenje) i dva broja na koja treba primijeniti tu operaciju. U svakom trenutku brojevi i operacija se generišu slučajnim odabirom. </p>
+        <p>Težina pitanja je zasnovana na veličini slučajno generisanih brojeva i mijenja se nakon svakog petog nivoa: <br>
+            <dl class="list-unstyled">
+                <dt>1. - 5. pitanje</dt>
+                <dd>Brojevi u intervalu [1, 5]</dd>
+                <dt>5. - 10. pitanje</dt>
+                <dd>Brojevi u intervalu [5, 15]</dd>
+                <dt>10. - 15. pitanje</dt>
+                <dd>Brojevi u intervalu [15, 45]</dd>
+            </dl> </p>
+        <p> Igrač tokom igre može iskoristiti 2 jokera: <br>
+            <dl class="list-unstyled">
+                <dt>Pola - pola</dt>
+                <dd>Uklanjaju se 2 od 3 netačna odgovora</dd>
+                <dt>Publika</dt>
+                <dd>4 ponuđena odgovora se rangiraju tako da publika najčešće odgovori tačno</dd>
+            </dl> </p>
+        <p> Igrač tokom igre ima 2 praga:
+            <dl class="list-unstyled">
+                <dt>1000 KM</dt>
+                <dd>Prag se prelazi nakon petog pitanja i ako igrač odgovori netačno osvaja 1000 KM</dd>
+                <dt>32 000 KM</dt>
+                <dd>Prag se prelazi nakon desetog pitanja i ako igrač odgovori netačno osvaja 32 000 KM</dd>
+            </dl> </p>
+        <p> Igrač u svakom trenutku može odustati od igre i osvojiti iznos koji nosi pitanje na koje je posljednje odgovorio. </p>
+        <button id="povratak1">Početni meni</button>
+    </div>
+    <div class="container oProjektu text-center">
+        <h2>O projektu</h2>
+        <dl class="list-unstyled">
+            <dt>Naziv projekta</dt>
+            <dd>Matematički milijunaš</dd>
+            <dt>Predmet</dt>
+            <dd>Web programiranje</dd>
+            <dt>Profesor</dt>
+            <dd>Prof. dr. Elmedin Selmanović</dd>
+            <dt>Asistent</dt>
+            <dd>Sead Delalić</dd>
+            <dt>Fakultet</dt>
+            <dd>Prirodno-matematički fakultet</dd>
+            <dt>Smjer</dt>
+            <dd>Teorijska kompjuterska nauka</dd>
+            <dt>Student</dt>
+            <dd>Dino-Sven Dedić</dd>
+            <dt>Email</dt>
+            <dd>dinosven.dedic@hotmail.com</dd>
+        </dl>
+        <button id="povratak2">Početni meni</button>
+    </div>
+    <div class="container glavni">
+        <div class="naslov">
+            <h1 class="text-center">Kviz matematički milijunaš</h1>
+        </div>
+        <div class="igra row">
+            <div class="col-lg-9 col-sm-8">
+                <div class="pitanje">
+                    <p id="pitanje" class="text-center"></p>
+                </div>
+                <div class="odgovori text-center"></div>
+            </div>
+            <div class="col-lg-3 col-sm-4 desno">
+                <ul class="list-unstyled list-inline text-center jokeri">
+                    <li class="list-inline-item"><button id="polaPola"><img src="icons/5050.png"></button></li>
+                    <li class="list-inline-item"><button id="publika"><img src="icons/audience.png"></button></li>
+                    <li class="list-inline-item"><button id="odustani"><img src="icons/giveup.png"></button></li>
+                </ul>
+                <span><p class="text-center osvojeno">0 KM</p></span>
+                <ul class="list-unstyled text-center skala">
+                        <li>1 000 000 KM</li>
+                        <li>500 000 KM</li>
+                        <li>250 000 KM</li>
+                        <li>125 000 KM</li>
+                        <li>64 000 KM</li>
+                        <li class="prag">32 000 KM</li>
+                        <li>16 000 KM</li>
+                        <li>8000 KM</li>
+                        <li>4000 KM</li>
+                        <li>2000 KM</li>
+                        <li class="prag">1000 KM</li>
+                        <li>500 KM</li>
+                        <li>300 KM</li>
+                        <li>200 KM</li>
+                        <li class="trenutno">100 KM</li>
+                    </ul>
+            </div>
+        </div>          
+    </div>
+    <div class="pop-up"> 
+         <div class="poruka text-center">
+            <p id="poruka"></p>
+        </div>
+        <div class="restart text-center">
+            <button id="pocetak">Početni meni</button>
+            <button id="restart">Ponovna igra</button>
+        </div> 
+        <div class="pomocPublike text-center">
+            <div class="bar-A">A</div><br>
+            <div class="bar-B">B</div><br>
+            <div class="bar-C">C</div><br>
+            <div class="bar-D">D</div>
+            <button id="zatvori">Zatvori</button>
+        </div> 
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

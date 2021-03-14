@@ -1,0 +1,164 @@
+body {
+      background-color: #40419c;
+}
+
+body, button {
+      font-weight: bold;
+}
+
+.glavni, .igra, .pitanje, 
+.desno, .oProjektu, .pravila, 
+.pocetni {
+      margin-top: 10px;
+}
+
+.naslov h1, .trenutno, .pitanje, 
+.jokeri p, .pravila p, dt,
+.osvojeno, .iskoristeno {
+      color: white;
+}
+
+.igra, button, .poruka, 
+.restart, .pomocPublike, .pravila, 
+.oProjektu, .pocetni {
+      background-color: #3607b8;
+}
+
+.igra, .pocetni, .pravila, .oProjektu {
+      border: 5px solid #11118a;
+      padding-right: 10px;
+}
+
+.pravila p {
+  font-size: 18px;
+}
+
+dl {
+  font-size: 15px;
+}
+
+.pitanje, .odgovori, .desno, 
+button, .poruka, .restart,
+.pomocPublike {
+      border: 5px solid #4151e2;
+}
+
+.pitanje, .odgovori, .desno, {
+      background-color: #11118a;
+}
+
+button, .skala, .poruka,
+.restart, .pomocPublike, dd,
+img, h2 {
+      color: #fa7900;
+}
+
+button {
+      border-radius: 5px;
+}
+
+button, .jokeri p {
+      font-size: 20px;
+}
+
+.pitanje {
+      height: 60%;
+      font-size: 50px;
+      padding-top: 35px;
+}
+
+.odgovori {
+      margin-top: 25px;
+      height: 33%;
+      width: 100%;
+      padding: 13px;
+}
+
+.odgovori button {
+      width: 45%;
+      height: 40%;
+      margin: 7px;
+}
+
+.desno, .oProjektu, .pravila, .pocetni {
+      margin-bottom: 10px;
+}
+
+.jokeri {
+      margin-top: 5px;
+}
+
+.jokeri, .skala li, .osvojeno {
+      border: 1px solid #4151e2;
+}
+
+.jokeri, .oProjektu, .pravila,
+.pocetni {
+      padding: 5px;
+}
+
+.jokeri button {
+      width: 80px;
+      height: 50px;
+      margin: 3px;
+}
+
+#odustani {
+  margin-left: 2px;
+}
+
+.trenutno {
+      background-color: #fa7900;
+}
+
+button:hover {
+      background-color: white;
+      opacity: 0.7;
+}
+
+.poruka, .restart, .pomocPublike {
+    font-size: 18px;
+    width: 380px;
+    padding: 10px;
+    position: fixed;
+    top: 35%;
+    left: 43%;
+    transform: translate(-50%, -50%); /*https://css-tricks.com/considerations-styling-modal/ */
+}
+
+.restart button, .pomocPublike button {
+  margin: 5px;
+}
+
+.prag {
+  border: 2px solid #fa7900 !important;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  padding: 1px;
+}
+
+.glavni, .pravila, .oProjektu, 
+.ime, .poruka, .restart, 
+.pomocPublike {
+  display: none;
+}
+
+.pocetni {
+  height: 250px;
+}
+
+.pocetni button, #povratak1, #povratak2 {
+  background-color: #11118a;
+  width: 200px;
+}
+
+.pocetni button {
+  margin-top: 40px;
+}
+
+.iskoristeno {
+  background-color: red;
+}
